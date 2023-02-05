@@ -6,29 +6,26 @@ namespace Address_Book
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Address Book\r\nProgram in");
-            Contact contact = new Contact();
-            Console.WriteLine("Enter your First Name");
-            contact.firstName = Console.ReadLine();
-            Console.WriteLine("Enter your Last Name");
-            contact.lastName = Console.ReadLine();
-            Console.WriteLine("Enter your Address ");
-            contact.Address = Console.ReadLine();
-            Console.WriteLine("Enter your City name ");
-            contact.City = Console.ReadLine();
-            Console.WriteLine("Enter your State name");
-            contact.State = Console.ReadLine();
-            Console.WriteLine("Enter your zipcode");
-            contact.Zipcode = Console.ReadLine();
-            Console.WriteLine("Enter your Phone number");
-            contact.Phone = Console.ReadLine();
-            Console.WriteLine("Enter your email ");
-            contact.Email = Console.ReadLine();
+            Console.WriteLine("Welcome to Address Book\r\nPrograming");
+            addressBook data = new addressBook();
 
-            string data=  contact.ToString();
-            Console.WriteLine(data);
-            Console.ReadKey();
 
+            while (true)
+            {
+                Console.WriteLine("enter option \n a - add new no.\n b - disply  all stored contacts ");
+                char op = char.Parse(Console.ReadLine());
+                switch (op)
+                {
+                    case 'a': Console.WriteLine("add new contact");
+                        data.AddContact();
+                        break;
+                    case 'b': Console.WriteLine("add new contact");
+                        data.disply();
+                        break;
+                    default: Console.WriteLine("enter onlye suggest charect");
+                        break;
+                }
+            }
         }
     }
 }
